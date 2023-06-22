@@ -367,3 +367,9 @@
   text-transform: uppercase;
   color: var(--light-purple-color);
 }
+
+@media (max-width: 802px) {
+  .modal__form-file-label {
+    font-size: 12px;
+  }
+}
