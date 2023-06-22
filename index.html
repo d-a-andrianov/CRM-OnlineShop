@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/svg+xml" href="src/img/favicon.svg">
+  <link rel="icon" type="image/png" href="src/img/favicon.png">
+
+  <link rel="stylesheet" href="src/css/index.css">
+
+  <link rel="preload" href="src/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="src/fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="src/fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="src/fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+  <title>CRM-OnlineShop</title>
+
+</head>
+
+<body>
+
+  <section class="modal">
+    <div class="modal-overlay" id="modal-overlay">
+      <div class="container">
+        <div class="modal__add-product">
+
+          <!-- Кнопка крестик -->
+
+          <button class="modal__button-x" type="button">
+            <img src="/src/img/logo_x.svg" alt="Крестик для закрытия формы">
+          </button>
+
+          <h1 class="modal__title">Добавить товар</h1>
+
+          <!-- Форма -->
+
+          <form class="modal__form" id="my-form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+
+            <fieldset class="modal__fieldset">
+
+              <div class="modal__form-name">
+                <label class="modal__label" for="add-name">Наименование</label>
+                <input class="modal__input" type="text" name="name" id="add-name">
+              </div>
+
+              <div class="modal__form-category">
+                <label class="modal__label" for="add-category">Категория</label>
+                <input class="modal__input" type="text" name="category" id="add-category">
+              </div>
+
+              <div class="modal__form-units">
+                <label class="modal__label" for="add-units">Единицы измерения</label>
+                <input class="modal__input" type="text" name="units" aria-label="Добавить скидку" id="add-units">
+              </div>
+
+              <div class="modal__form-discont">
+                <label class="modal__label" for="add-discont-text">Дисконт</label>
+                <input class="modal__checkbox modal__checkbox-decoration" type="checkbox" aria-label="Добавить скидку">
+                <input class="modal__input-small" type="text" name="add-discont-text" id="add-discont-text" disabled>
+              </div>
+
+              <div class="modal__form-description">
+                <label class="modal__label" for="add-description">Описание</label>
+                <textarea class="modal__textarea" name="description" cols="20" rows="3" id="add-description">
+              </textarea>
+              </div>
+
+              <div class="modal__form-amount">
+                <label class="modal__label" for="add-amount">Количество</label>
+                <input class="modal__input" type="number" name="amount" id="add-amount">
+              </div>
+
+              <div class="modal__form-price">
+                <label class="modal__label" for="add-price">Цена</label>
+                <input class="modal__input" type="number" name="price" id="add-price">
+              </div>
+
+              <!-- Загрузка изображения -->
+
+              <div class="modal__form-file-info">
+                Изображение не должно превышать размер 1 Мб
+              </div>
+
+              <div class="modal__form-file-wrapper">
+                <label class="modal__form-file-label">
+                  <input class="modal__form-file-input" form="modal-form" type="file" accept="image/*" />Добавить
+                  изображение
+                </label>
+              </div>
+
+              <!-- <input type="file" name="files" value="Выберете файл"> -->
+
+            </fieldset>
+          </form>
+
+          <!-- Итоговая стоимость -->
+
+          <div class="modal__total-wrapper">
+
+            <div class="modal__total">
+              <div class="modal__final">
+                <div class="modal__final-text">
+                  Итоговая стоимость:
+                </div>
+                <div class="modal__final-price">
+                  $ 900.00
+                </div>
+              </div>
+              <button class="modal__button" form="my-form" type="submit">Добавить товар</button>
+            </div>
+
+          </div>
+
+          <!-- Окно с ошибкой: Что-то пошло не так -->
+
+          <div class="modal__error">
+
+            <button class="modal__error-button-x" type="button">
+              <img src="/src/img/logo_x.svg" alt="Крестик для закрытия формы">
+            </button>
+
+            <img class="modal__error-img" src="src/img/error.svg" alt="Произошла ошибка!">
+
+            <div class="modal__error-text">
+              Что-то пошло не так
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+</body>
+
+</html>
