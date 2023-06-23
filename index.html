@@ -24,62 +24,67 @@
 
   <!-- CMS таблица -->
   <section class="cms">
-    <div class="cms__wrapper">
+    <div class="container cms__container">
+      <div class="cms__header">
+        <h1 class="cms__title">CMS</h1>
+      </div>
 
+      <div class="cms__wrapper">
         <table class="cms__table">
           <!-- Заголовок таблицы -->
           <thead class="cms__table-thead">
             <tr>
-              <td>
+              <th class="cms__table-column-id">
                 ID
-              </td>
-              <td>
+              </th>
+              <th class="cms__table-column-name">
                 Наименование
-              </td>
-              <td>
+              </th>
+              <th class="cms__table-column-category">
                 Категория
-              </td>
-              <td>
+              </th>
+              <th class="cms__table-column-units">
                 ед/изм
-              </td>
-              <td>
+              </th>
+              <th class="cms__table-column-amount">
                 количество
-              </td>
-              <td>
+              </th>
+              <th class="cms__table-column-price">
                 цена
-              </td>
-              <td>
+              </th>
+              <th class="cms__table-column-total">
                 ИТОГ
-              </td>
-              <td class="cms__table-thead-empty">
-                пустая ячейка
-              </td>
+              </th>
+              <th class="cms__table-column-empty">
+              </th>
             </tr>
-            
+
           </thead>
 
           <!-- Тело таблицы -->
           <tbody class="cms__table-tbody">
+
+            <!-- 1 строка таблицы -->
             <tr class="cms__table-tbody-line">
-              <td>
+              <td class="cms__table-column-id">
                 246016548
               </td>
-              <td>
+              <td class="cms__table-column-name">
                 Навигационная система Soundmax
               </td>
-              <td>
+              <td class="cms__table-column-category">
                 Техника для дома
               </td>
-              <td>
+              <td class="cms__table-column-units">
                 шт
               </td>
-              <td>
+              <td class="cms__table-column-amount">
                 5
               </td>
-              <td>
+              <td class="cms__table-column-price">
                 $100
               </td>
-              <td>
+              <td class="cms__table-column-total">
                 $500
               </td>
               <td class="cms__table-tbody-icons">
@@ -95,27 +100,318 @@
               </td>
             </tr>
 
+            <!-- 2 строка таблицы -->
             <tr class="cms__table-tbody-line">
-              <td>
+              <td class="cms__table-column-id">
                 937295527
               </td>
-              <td>
+              <td class="cms__table-column-name">
                 Настольная игра “На 4-х ногах”
               </td>
-              <td>
+              <td class="cms__table-column-category">
                 Настольные игры
               </td>
-              <td>
+              <td class="cms__table-column-units">
                 шт
               </td>
-              <td>
+              <td class="cms__table-column-amount">
                 12
               </td>
-              <td>
+              <td class="cms__table-column-price">
                 $14
               </td>
-              <td>
+              <td class="cms__table-column-total">
                 $168
+              </td>
+              <td class="cms__table-tbody-icons">
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_no-image.svg" alt="Нет изображения">
+                </button>
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_edit.svg" alt="Нет изображения">
+                </button>
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_delete.svg" alt="Нет изображения">
+                </button>
+              </td>
+            </tr>
+
+            <!-- 3 строка таблицы -->
+            <tr class="cms__table-tbody-line">
+              <td class="cms__table-column-id">
+                246016548
+              </td>
+              <td class="cms__table-column-name">
+                Навигационная система Soundmax
+              </td>
+              <td class="cms__table-column-category">
+                Техника для дома
+              </td>
+              <td class="cms__table-column-units">
+                шт
+              </td>
+              <td class="cms__table-column-amount">
+                5
+              </td>
+              <td class="cms__table-column-price">
+                $100
+              </td>
+              <td class="cms__table-column-total">
+                $500
+              </td>
+              <td class="cms__table-tbody-icons">
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_no-image.svg" alt="Нет изображения">
+                </button>
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_edit.svg" alt="Нет изображения">
+                </button>
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_delete.svg" alt="Нет изображения">
+                </button>
+              </td>
+            </tr>
+
+
+            <!-- 4 строка таблицы -->
+            <tr class="cms__table-tbody-line">
+              <td class="cms__table-column-id">
+                246016548
+              </td>
+              <td class="cms__table-column-name">
+                Навигационная система Soundmax
+              </td>
+              <td class="cms__table-column-category">
+                Техника для дома
+              </td>
+              <td class="cms__table-column-units">
+                шт
+              </td>
+              <td class="cms__table-column-amount">
+                5
+              </td>
+              <td class="cms__table-column-price">
+                $100
+              </td>
+              <td class="cms__table-column-total">
+                $500
+              </td>
+              <td class="cms__table-tbody-icons">
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_no-image.svg" alt="Нет изображения">
+                </button>
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_edit.svg" alt="Нет изображения">
+                </button>
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_delete.svg" alt="Нет изображения">
+                </button>
+              </td>
+            </tr>
+
+            <!-- 5 строка таблицы -->
+            <tr class="cms__table-tbody-line">
+              <td class="cms__table-column-id">
+                246016548
+              </td>
+              <td class="cms__table-column-name">
+                Навигационная система Soundmax
+              </td>
+              <td class="cms__table-column-category">
+                Техника для дома
+              </td>
+              <td class="cms__table-column-units">
+                шт
+              </td>
+              <td class="cms__table-column-amount">
+                5
+              </td>
+              <td class="cms__table-column-price">
+                $100
+              </td>
+              <td class="cms__table-column-total">
+                $500
+              </td>
+              <td class="cms__table-tbody-icons">
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_no-image.svg" alt="Нет изображения">
+                </button>
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_edit.svg" alt="Нет изображения">
+                </button>
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_delete.svg" alt="Нет изображения">
+                </button>
+              </td>
+            </tr>
+
+            <!-- 6 строка таблицы -->
+            <tr class="cms__table-tbody-line">
+              <td class="cms__table-column-id">
+                246016548
+              </td>
+              <td class="cms__table-column-name">
+                Навигационная система Soundmax
+              </td>
+              <td class="cms__table-column-category">
+                Техника для дома
+              </td>
+              <td class="cms__table-column-units">
+                шт
+              </td>
+              <td class="cms__table-column-amount">
+                5
+              </td>
+              <td class="cms__table-column-price">
+                $100
+              </td>
+              <td class="cms__table-column-total">
+                $500
+              </td>
+              <td class="cms__table-tbody-icons">
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_no-image.svg" alt="Нет изображения">
+                </button>
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_edit.svg" alt="Нет изображения">
+                </button>
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_delete.svg" alt="Нет изображения">
+                </button>
+              </td>
+            </tr>
+
+
+            <!-- 7 строка таблицы -->
+            <tr class="cms__table-tbody-line">
+              <td class="cms__table-column-id">
+                246016548
+              </td>
+              <td class="cms__table-column-name">
+                Навигационная система Soundmax
+              </td>
+              <td class="cms__table-column-category">
+                Техника для дома
+              </td>
+              <td class="cms__table-column-units">
+                шт
+              </td>
+              <td class="cms__table-column-amount">
+                5
+              </td>
+              <td class="cms__table-column-price">
+                $100
+              </td>
+              <td class="cms__table-column-total">
+                $500
+              </td>
+              <td class="cms__table-tbody-icons">
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_no-image.svg" alt="Нет изображения">
+                </button>
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_edit.svg" alt="Нет изображения">
+                </button>
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_delete.svg" alt="Нет изображения">
+                </button>
+              </td>
+            </tr>
+
+            <!-- 8 строка таблицы -->
+            <tr class="cms__table-tbody-line">
+              <td class="cms__table-column-id">
+                246016548
+              </td>
+              <td class="cms__table-column-name">
+                Навигационная система Soundmax
+              </td>
+              <td class="cms__table-column-category">
+                Техника для дома
+              </td>
+              <td class="cms__table-column-units">
+                шт
+              </td>
+              <td class="cms__table-column-amount">
+                5
+              </td>
+              <td class="cms__table-column-price">
+                $100
+              </td>
+              <td class="cms__table-column-total">
+                $500
+              </td>
+              <td class="cms__table-tbody-icons">
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_no-image.svg" alt="Нет изображения">
+                </button>
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_edit.svg" alt="Нет изображения">
+                </button>
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_delete.svg" alt="Нет изображения">
+                </button>
+              </td>
+            </tr>
+
+            <!-- 9 строка таблицы -->
+            <tr class="cms__table-tbody-line">
+              <td class="cms__table-column-id">
+                246016548
+              </td>
+              <td class="cms__table-column-name">
+                Навигационная система Soundmax
+              </td>
+              <td class="cms__table-column-category">
+                Техника для дома
+              </td>
+              <td class="cms__table-column-units">
+                шт
+              </td>
+              <td class="cms__table-column-amount">
+                5
+              </td>
+              <td class="cms__table-column-price">
+                $100
+              </td>
+              <td class="cms__table-column-total">
+                $500
+              </td>
+              <td class="cms__table-tbody-icons">
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_no-image.svg" alt="Нет изображения">
+                </button>
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_edit.svg" alt="Нет изображения">
+                </button>
+                <button class="cms__table-tbody-button">
+                  <img src="src/img/icons_delete.svg" alt="Нет изображения">
+                </button>
+              </td>
+            </tr>
+
+            <!-- 10 строка таблицы -->
+            <tr class="cms__table-tbody-line">
+              <td class="cms__table-column-id">
+                246016548
+              </td>
+              <td class="cms__table-column-name">
+                Навигационная система Soundmax
+              </td>
+              <td class="cms__table-column-category">
+                Техника для дома
+              </td>
+              <td class="cms__table-column-units">
+                шт
+              </td>
+              <td class="cms__table-column-amount">
+                5
+              </td>
+              <td class="cms__table-column-price">
+                $100
+              </td>
+              <td class="cms__table-column-total">
+                $500
               </td>
               <td class="cms__table-tbody-icons">
                 <button class="cms__table-tbody-button">
@@ -135,7 +431,7 @@
 
       </div>
 
-
+    </div>
   </section>
 
 

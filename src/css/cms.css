@@ -1,23 +1,38 @@
+.cms__container {
+  max-width: 1160px;
+  min-height: 762px;
+  padding: 0 25px;
+}
+
 .cms__wrapper {
   margin: 0 auto;
-  width: 1200px;
+  min-width: 1100px;
+  /* max-width: 1100px; */
   height: 762px;
-  padding: 50px;
+  /* padding: 100px 0; */
 
   /* width: 100%;  
   height: 100%; */
 }
 
+.cms__title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+}
+
 .cms__table {
+  margin: 0 auto;
   min-width: 1100px;
+  /* max-width: 1100px; */
   /* background: var(--background-color); */
-  /* border: 1px solid var(--black-color); */
+  border-top: 1px solid var(--violet-light-color);
+  border-bottom: 1px solid var(--violet-light-color);
   border-collapse: collapse;
   border-spacing: 0px;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
-  border-radius: 4px;
+  border-radius: 8px;
   text-align: left;
-
 }
 
 .cms__table-thead {
@@ -30,17 +45,60 @@
   text-transform: uppercase;
   border-top: 1px solid var(--violet-light-color);
   border-bottom: 1px solid var(--violet-light-color);
+  border-radius: 8px;
 }
 
-.cms__table-thead-empty {
+.cms__table-column-id {
+  width: 93px;
+  padding-left: 15px;
+  text-align: start;
+}
 
+.cms__table-column-name {
+  width: 305px;
+  padding-left: 14px;
+  text-align: start;
+}
+
+.cms__table-column-category {
+  width: 187px;
+  padding-left: 13px;
+  text-align: start;
+}
+
+.cms__table-column-units {
+  width: 55px;
+  padding-top: 2px;
+  text-align: center;
+}
+
+.cms__table-column-amount {
+  width: 121px;
+  padding: 2px 4px 0 0;
+  text-align: center;
+}
+
+.cms__table-column-price {
+  width: 80px;
+  text-align: end;
+}
+
+.cms__table-column-total {
+  width: 95px;
+  padding-right: 2px;
+  text-align: end;
+}
+
+.cms__table-column-empty {
+  width: 163px;
 }
 
 .cms__table-tbody {
-
+  border-collapse: collapse;
 }
 
 .cms__table-tbody-line {
+  border-collapse: collapse;
   height: 60px;
   color: var(--dark-grey-color);
   font-size: 14px;
@@ -51,8 +109,7 @@
 
 .cms__table-tbody-icons {
   display: flex;
-  padding-top: 20px;
-  padding-left: 50px;
+  padding: 20px 0 0 48px;
   gap: 20px;
 }
 
