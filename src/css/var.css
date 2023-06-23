@@ -1,12 +1,4 @@
 :root {
-  
-    --deep-purple-color: #440F51;
-  --white-purple-color: #EADEED;
-  --dark-purple-color: #6C0287;
-  --violet-color: #640AA3;
-  --graphite-black-color: #1C1A1A;
-  --gray-color: #CCCCCC;
-
   --background-color: #F2F0F9;
   --input-color: #F4F2FF;
   --black-color: #000000;
@@ -15,5 +7,6 @@
   --red-color: #D80101;
   --purple-color:#6D5BD0;
   --light-purple-color: #6E6893;
+  --violet-light-color: #D9D5EC;
 
 }

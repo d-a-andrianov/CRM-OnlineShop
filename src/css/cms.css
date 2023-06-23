@@ -1,9 +1,61 @@
 .cms__wrapper {
-  background: var(--background-color);
-  width: 100%;
-  height: 100%;
+  margin: 0 auto;
+  width: 1200px;
+  height: 762px;
+  padding: 50px;
+
+  /* width: 100%;  
+  height: 100%; */
 }
 
 .cms__table {
-  border: 1px solid var(--black-color);
+  min-width: 1100px;
+  /* background: var(--background-color); */
+  /* border: 1px solid var(--black-color); */
+  border-collapse: collapse;
+  border-spacing: 0px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  text-align: left;
+
+}
+
+.cms__table-thead {
+  height: 45px;
+  background: var(--input-color);
+  color: var(--light-purple-color);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  border-top: 1px solid var(--violet-light-color);
+  border-bottom: 1px solid var(--violet-light-color);
+}
+
+.cms__table-thead-empty {
+
+}
+
+.cms__table-tbody {
+
+}
+
+.cms__table-tbody-line {
+  height: 60px;
+  border-top: 1px solid var(--violet-light-color);
+  border-bottom: 1px solid var(--violet-light-color);
+}
+
+.cms__table-tbody-icons {
+  display: flex;
+  padding-top: 20px;
+  padding-left: 50px;
+  gap: 20px;
+}
+
+.cms__table-tbody-button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: var(--white-color);
 }
