@@ -1,17 +1,18 @@
+.cms {
+  padding: 100px 0;
+}
+
 .cms__container {
   max-width: 1160px;
   min-height: 762px;
   padding: 0 25px;
 }
 
-.cms__wrapper {
-  margin: 0 auto;
-  min-width: 1100px;
-  height: 762px;
-  background: var(--white-color);
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-
+.cms__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 7px;
 }
 
 .cms__title {
@@ -20,10 +21,19 @@
   letter-spacing: 2.4px;
 }
 
+.cms__wrapper {
+  margin: 0 auto;
+  min-width: 1105px;
+  height: 762px;
+  background: var(--white-color);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
 .cms__table {
   padding-top: 50px;
   margin: 0 auto;
-  min-width: 1110px;
+  min-width: 1105px;
   /* max-width: 1100px; */
   /* background: var(--background-color); */
   border-top: 1px solid var(--violet-light-color);
