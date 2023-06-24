@@ -27,6 +27,7 @@
     <div class="container cms__container">
       <div class="cms__header">
         <h1 class="cms__title">CMS</h1>
+        <!-- исппользовал кнопку из модального окна -->
         <div class="modal__final">
           <div class="modal__final-text">
             Итоговая стоимость:
@@ -42,6 +43,7 @@
 
       <div class="cms__wrapper">
         <div class="cms__header-nav">
+          <div class="cms__header-nav-wrapper">
           <button class="cms__header-filter">
             <img src="src/img/icon-filter.svg" alt="Фильтр">
             <div class="cms__header-filter-text">
@@ -49,12 +51,16 @@
             </div>
           </button>
           <div class="cms__header-search">
-            <button>
+            <button class="cms__header-search-btn">
               <img src="src/img/icon-search.svg" alt="">
             </button>
-            <input type="search" name="search" placeholder="Поиск по наименованию и категории">
+            <input class="cms__header-search-input" type="search" name="search" placeholder="Поиск по наименованию и категории">
           </div>
         </div>
+        <button class="cms__header-button" form="my-form" type="submit">Добавить товар</button>
+      </div>
+          
+
         <table class="cms__table">
           <!-- Заголовок таблицы -->
           <thead class="cms__table-thead">
