@@ -88,3 +88,7 @@ html {
   .container {
     margin: 0 auto;
   }
+
+  section {
+    background-color: var(--background-color);
+  }
