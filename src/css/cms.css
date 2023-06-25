@@ -289,6 +289,7 @@
 @media (max-width: 816px) {
   .cms__header-nav-wrapper {
     flex-wrap: wrap;
+    width: 214px;
   }
 
   .cms__header-button {
