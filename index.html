@@ -28,18 +28,15 @@
       <div class="cms__header">
         <h1 class="cms__title">CMS</h1>
         <!-- исппользовал кнопку из модального окна -->
-        <div class="modal__final">
-          <div class="modal__final-text">
+        <div class="cms__final">
+          <div class="cms__final-text">
             Итоговая стоимость:
           </div>
-          <div class="modal__final-price">
-            $ 900.00
+          <div class="cms__final-price">
+            $  900.00
           </div>
       </div>
     </div>
-
-
-
 
       <div class="cms__wrapper">
         <div class="cms__header-nav">
@@ -461,10 +458,31 @@
 
         <!-- Футер таблицы -->
         <div class="cms__table-footer">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum deleniti veritatis assumenda consectetur, quos esse, in qui, sequi doloribus quisquam animi. Asperiores mollitia soluta sapiente quae similique at reprehenderit maiores.
+            <div class="cms__table-footer-menu">
+              <form>
+                <label for="units">Показывать на странице:</label>
+                <select class="cms__table-footer-menu-select" id="units" name="units">
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="30">30</option>
+                  <option value="40">40</option>
+                </select>
+              </form>
+            </div>
+            <div class="cms__table-footer-menu-text">
+              1-10 of 276
+            </div>
+
+              <button class="cms__table-footer-btn">
+                <img src="src/img/arrow-left.svg" alt="Листать влево">
+              </button>
+              <button class="cms__table-footer-btn">
+                <img src="src/img/arrow-right.svg" alt="Листать вправо">
+              </button>
+
+          </div>
         </div>
       </div>     
-      </div>
   </section>
 
 
