@@ -8,4 +8,5 @@ const productCurrency = '$';
 
 const productResult = (productUnits * productPrice);
 
+console.log (productName);
 console.log (productResult + productCurrency);
