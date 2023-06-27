@@ -1,5 +1,7 @@
 // 'use strict';
 
+// // ДЗ 4.1
+
 // const productName = 'Навигационная система Soundmax';
 // const productUnits = '5';
 // const productCategory = 'Техника для дома';
@@ -11,6 +13,7 @@
 // console.log (productName);
 // console.log (productResult + productCurrency);
 
+// // для тренировки
 
 // document.body.innerHTML = 
 // `<h1 class="title">Привет ${productName}</h1>
