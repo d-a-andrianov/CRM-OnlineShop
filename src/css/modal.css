@@ -20,6 +20,10 @@
   border-radius: 4px;
 }
 
+.modal-modify {
+  display: flex;
+}
+
 .modal__add-product {
   /* display: none; */
   margin: 0 auto;
