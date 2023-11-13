@@ -10,7 +10,7 @@
   justify-content: center;
 }
 
-.modal {
+.modal_active {
   display: none;
   margin: 0 auto;
   /* background-color: #b8abab;
