@@ -1,3 +1,21 @@
+.cms__table-tbody-button:hover {
+  /* color: var(--red-color); */
+  display: block;
+  outline: 1px solid var(--heavy-purple-color);
+  border: none;
+}
+
+.cms__table-tbody-button:focus {
+  display: block;
+  outline: 1px solid var(--light-purple-color);
+  outline-offset: 2px;
+}
+
+.cms__table-tbody-button:active {
+  display: block;
+  outline: none;
+}
+
 .cms {
   padding: 110px 0;
 }
