@@ -2,6 +2,7 @@
   /* color: var(--red-color); */
   display: block;
   outline: 1px solid var(--heavy-purple-color);
+  outline-offset: 4px;
   border: none;
 }
 
