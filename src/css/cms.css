@@ -1,5 +1,5 @@
 .cms__table-tbody-button:hover {
-  /* color: var(--red-color); */
+  color: var(--heavy-purple-color);
   display: block;
   outline: 1px solid var(--heavy-purple-color);
   outline-offset: 4px;
@@ -13,8 +13,13 @@
 }
 
 .cms__table-tbody-button:active {
+  color: var(--red-color);
   display: block;
   outline: none;
+}
+
+.cms__table-tbody-button {
+  color: #6E6893;
 }
 
 .cms {
@@ -82,7 +87,7 @@
   margin: 0 auto;
   width: 100%;
   /* width: 1100px; */
-  height: 762px;
+  /* height: 762px; */
   background: var(--white-color);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
