@@ -110,6 +110,8 @@
     const btnX = document.querySelector('.modal__button-x');
     // ищем модальное окно по классу
     const modalAdd = document.querySelector('.modal');
+    // ищем оверлей модального окна по классу 
+    const modalOverlay = document.querySelector('.modal-overlay');
 
     // добавляем событие по клику на кнопку "добавить товар", добавить класс видимости для модального окна
     btnAddGood.addEventListener('click', () => {
@@ -117,13 +119,18 @@
       modalAdd.classList.add('modal-visible');
     });
 
+    // добавляем событие по клику по оверлею, убрать класс видимость модального окна
+    modalOverlay.addEventListener('click', () => {
+      // добавляем класс для модального окна modal, делаем видимым модальное окно (форма)
+      modalOverlay.classList.add('modal-overlay-visible');
+    });
+
     // добавляем событие по клику на кнопку крестик, убрать класс видимость модального окна
     btnX.addEventListener('click', () => {
-      // добавляем класс для formOverlay, делаем видимым модальное окно (форма)
+      // удаляем класс для modal, делаем невидимым модальное окно (форма)
       modalAdd.classList.remove('modal-visible');
     });
   };
-
 
   renderGoods(goods);
   btnAdd();
