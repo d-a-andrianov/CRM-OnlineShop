@@ -85,7 +85,7 @@
       <path id="Vector_2" d="M18.0394 14.2648V17.206C18.0394 17.726 17.8328 18.2248 17.4651 18.5925C17.0973 18.9602 16.5986 19.1668 16.0786 19.1668H5.29415C4.77411 19.1668 4.27537 18.9602 3.90765 18.5925C3.53993 18.2248 3.33334 17.726 3.33334 17.206V6.42157C3.33334 5.90154 3.53993 5.4028 3.90765 5.03508C4.27537 4.66735 4.77411 4.46077 5.29415 4.46077H8.23535" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg></button>
 
-      <button class='cms__table-tbody-button' aria-label="delete"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <button class='cms__table-tbody-button button-delete' aria-label="delete"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path id="Vector" d="M7.03125 3.59375H6.875C6.96094 3.59375 7.03125 3.52344 7.03125 3.4375V3.59375H12.9688V3.4375C12.9688 3.52344 13.0391 3.59375 13.125 3.59375H12.9688V5H14.375V3.4375C14.375 2.74805 13.8145 2.1875 13.125 2.1875H6.875C6.18555 2.1875 5.625 2.74805 5.625 3.4375V5H7.03125V3.59375ZM16.875 5H3.125C2.7793 5 2.5 5.2793 2.5 5.625V6.25C2.5 6.33594 2.57031 6.40625 2.65625 6.40625H3.83594L4.31836 16.6211C4.34961 17.2871 4.90039 17.8125 5.56641 17.8125H14.4336C15.1016 17.8125 15.6504 17.2891 15.6816 16.6211L16.1641 6.40625H17.3438C17.4297 6.40625 17.5 6.33594 17.5 6.25V5.625C17.5 5.2793 17.2207 5 16.875 5ZM14.2832 16.4062H5.7168L5.24414 6.40625H14.7559L14.2832 16.4062Z"/>
       </svg></button>
     </td>
@@ -114,30 +114,62 @@
     const modalOverlay = document.querySelector('.modal-overlay');
     // ищем форму модального окна по классу 
     const modalForm = document.querySelector('.modal__add-product');
-    
+    // ищем всю область таблицы cms__table
+    const cmsTable = querySelector('.cms__table');
+    // ищем кнопку удаления (корзина) (button-delete)   
+    const buttonDelete = querySelector('.button-delete');
+
+
     // добавляем событие по клику на кнопку "добавить товар", добавить класс видимости для модального окна
     btnAddGood.addEventListener('click', () => {
       // добавляем класс для модального окна modal, делаем видимым модальное окно (форма)
       modalAdd.classList.add('modal-visible');
     });
 
-    // при клике по форме добавляем событие, чтобы она не закрывалась (используем stopPropagation или stopImmediatePropagation)
-    modalForm.addEventListener('click', event => {
-      event.stopImmediatePropagation();
+    // // при клике по форме добавляем событие, чтобы она не закрывалась (используем stopPropagation или stopImmediatePropagation)
+    // modalForm.addEventListener('click', event => {
+    //   event.stopImmediatePropagation();
+    // });
+
+    // на modal-overlay (фон когда форма активна) вешаем событие для закрытия модального окна при клике по оверлею ((используем вместо stopPropagation или stopImmediatePropagation))
+    modalOverlay.addEventListener('click', e => {
+      // запишем target константу для сокращения записи e.target;
+      const target = e.target;
+      // проверяем, что target это modal-overlay или имеет класс modal__button-x (кнопка закрытия)
+      if (target === modalOverlay ||
+        target.classList.contains('modal__button-x')) {
+        // если это так то удаляем класс для formOverlay, делаем невидимым модальное окно (форма)
+        modalAdd.classList.remove('modal-visible');
+      }
     });
 
-    // добавляем событие по клику по оверлею, убрать класс видимость модального окна
-    modalOverlay.addEventListener('click', () => {
-      // добавляем класс для модального окна modal, делаем видимым модальное окно (форма)
-      modalAdd.classList.remove('modal-visible');
-    });
+    // // добавляем событие по клику по оверлею, убрать класс видимость модального окна
+    // modalOverlay.addEventListener('click', () => {
+    //   // добавляем класс для модального окна modal, делаем видимым модальное окно (форма)
+    //   modalAdd.classList.remove('modal-visible');
+    // });
 
     // добавляем событие по клику на кнопку крестик, убрать класс видимость модального окна
     btnX.addEventListener('click', () => {
       // удаляем класс для modal, делаем невидимым модальное окно (форма)
       modalAdd.classList.remove('modal-visible');
     });
+
+    // с помощью делегирования буем кликать по всему листу (cms__table это вся область tbody)
+    // и в этой области определять клик (используем event (e) target)
+    cmsTable.addEventListener('click', e => {
+      // запишем target константу для сокращения записи e.target;
+      const target = e.target;
+      // при клике будем проверять, что event target соответствует кнопке удаления (корзина) (button-delete)
+      //  (можно использовать classList.contains вместо closest)
+      if (target.closest('.button-delete')) {
+        // поднимаемся до эл-та с классом cms__table-tbody-line (строка таблицы) и удаляем его
+        target.closest('.cms__table-tbody-line').remove();
+      }
+    });
   };
+
+
 
   renderGoods(goods);
   btnAdd();
