@@ -184,16 +184,14 @@
         console.log(deletedElement);
 
         // Находим индекс элемента в массиве по его id (если не найдет вернет -1)
-        const index = goods.findIndex(item => item.id == id);        
+        // или так пишем: const index = goods.findIndex(item => index.id == id);   
+        const index = goods.findIndex(item => goods.id == id);         
         console.log(index);
 
         // Если элемент найден (не равен -1), удаляем его из массива
         if (index !== -1) {
           goods.splice(index, 1);
         }
-
-        // проверям массив до удаления
-        console.log(goods);
     
         // Удаляем строку таблицы из DOM
         deletedElement.remove();
@@ -205,6 +203,8 @@
     
   };
 
+  // проверям массив до удаления
+  console.log(goods);
   renderGoods(goods);
   btnAdd();
 }
