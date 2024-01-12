@@ -115,9 +115,9 @@
     // ищем форму модального окна по классу 
     const modalForm = document.querySelector('.modal__add-product');
     // ищем всю область таблицы cms__table
-    const cmsTable = querySelector('.cms__table');
+    const cmsTable = document.querySelector('.cms__table');
     // ищем кнопку удаления (корзина) (button-delete)   
-    const buttonDelete = querySelector('.button-delete');
+    const buttonDelete = document.querySelector('.button-delete');
 
 
     // добавляем событие по клику на кнопку "добавить товар", добавить класс видимости для модального окна
@@ -155,21 +155,55 @@
       modalAdd.classList.remove('modal-visible');
     });
 
+    // // с помощью делегирования буем кликать по всему листу (cms__table это вся область tbody)
+    // // и в этой области определять клик (используем event (e) target)
+    // cmsTable.addEventListener('click', e => {
+    //   // запишем target константу для сокращения записи e.target;
+    //   const target = e.target;
+    //   // при клике будем проверять, что event target соответствует кнопке удаления (корзина) (button-delete)
+    //   //  (можно использовать classList.contains вместо closest)
+    //   if (target.closest('.button-delete')) {
+    //     // поднимаемся до эл-та с классом cms__table-tbody-line (строка таблицы) и удаляем его
+    //     target.closest('.cms__table-tbody-line').remove();
+
+    //   }
+    // });
+
     // с помощью делегирования буем кликать по всему листу (cms__table это вся область tbody)
     // и в этой области определять клик (используем event (e) target)
     cmsTable.addEventListener('click', e => {
       // запишем target константу для сокращения записи e.target;
       const target = e.target;
       // при клике будем проверять, что event target соответствует кнопке удаления (корзина) (button-delete)
-      //  (можно использовать classList.contains вместо closest)
+      // (можно использовать classList.contains вместо closest)
       if (target.closest('.button-delete')) {
-        // поднимаемся до эл-та с классом cms__table-tbody-line (строка таблицы) и удаляем его
-        target.closest('.cms__table-tbody-line').remove();
+        // добавим новую переменную для поиска и присвоения id для удаляемой строки
+        const deletedElement = target.closest('.cms__table-tbody-line');
+        // присвоим дата атрибут для deletedElement
+        const id = deletedElement.dataset.id;
+        console.log(deletedElement);
+
+        // Находим индекс элемента в массиве по его id (если не найдет вернет -1)
+        const index = goods.findIndex(item => item.id == id);        
+        console.log(index);
+
+        // Если элемент найден (не равен -1), удаляем его из массива
+        if (index !== -1) {
+          goods.splice(index, 1);
+        }
+
+        // проверям массив до удаления
+        console.log(goods);
+    
+        // Удаляем строку таблицы из DOM
+        deletedElement.remove();
+
+        // проверям массив после удаления
+        console.log(goods);
       }
     });
+    
   };
-
-
 
   renderGoods(goods);
   btnAdd();
