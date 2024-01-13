@@ -204,12 +204,10 @@
         console.log(goods);
       }
     });
-    
   };
 
   // проверям массив до удаления
   console.log(goods);
   renderGoods(goods);
   btnAdd();
-
 }
