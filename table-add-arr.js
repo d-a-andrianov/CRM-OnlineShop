@@ -60,8 +60,11 @@
     }
   ];
 
+  // ф-ия для создания строки таблицы
   const createRow = ({ id, title, category, units, count, price }) => {
     const tr = document.createElement('tr');
+    // добавляем dataset.id для поиска с помощью ф-ии index по id и дальнейшего удаления
+    tr.dataset.id = id;
     tr.classList.add('cms__table-tbody-line');
     tr.insertAdjacentHTML('afterbegin', `
     <td class='cms__table-column-id'>${id}</td>
@@ -185,24 +188,22 @@
 
         // Находим индекс элемента в массиве по его id (если не найдет вернет -1)
         // *? или так пишем: const index = goods.findIndex(item => index.id == id);
-          
-        const index = goods.findIndex(item => goods.id == id);         
+
+        const index = goods.findIndex(item => item.id == id);
         console.log(index);
 
         // Если элемент найден (не равен -1), удаляем его из массива
         if (index !== -1) {
           goods.splice(index, 1);
         }
-    
+
         // Удаляем строку таблицы из DOM
         deletedElement.remove();
- 
+
         // проверям массив после удаления
         console.log(goods);
- 
       }
     });
-    
   };
 
   // проверям массив до удаления
@@ -210,5 +211,3 @@
   renderGoods(goods);
   btnAdd();
 }
-
-
